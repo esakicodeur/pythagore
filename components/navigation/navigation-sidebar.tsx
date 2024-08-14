@@ -9,6 +9,7 @@ import { db } from "@/lib/db";
 
 import { NavigationAction } from "./navigation-action";
 import { NavigationItem } from "./navigation-item";
+import Image from "next/image";
 
 export const NavigationSidebar = async () => {
     const profile = await currentProfile();
@@ -31,6 +32,7 @@ export const NavigationSidebar = async () => {
         <div
             className="space-y-4 flex flex-col items-center h-full text-primary w-full dark:bg-[#1E1F22] bg-[#E3E5EB] py-3"
         >
+            <Image src={"https://res.cloudinary.com/dfmpvse6t/image/upload/v1717149338/rm7wi9uzledjfithiexe.png"} width={50} height={50} alt="logo" />
             <NavigationAction />
             <Separator
                 className="h-[2px] bg-zinc-300 dark:bg-zinc-700 rounded-md w-10 mx-auto"

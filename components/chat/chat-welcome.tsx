@@ -17,12 +17,12 @@ type
                 </div>
             )}
             <p className="text-xl md:text-3xl font-bold">
-                {type === "channel" ? "Welcome to #" : ""}{name}
+                {type === "channel" ? "Bienvenue à #" : ""}{name}
             </p>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm">
                 {type === "channel"
-                    ? `This is the start of the #${name} channel.`
-                    : `This is the start of your conversation with ${name}.`
+                    ? `C'est le début du canal #${name}.`
+                    : `C'est le début de votre conversation avec ${name}.`
                 }
             </p>
         </div>

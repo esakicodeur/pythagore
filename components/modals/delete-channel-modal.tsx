@@ -53,10 +53,10 @@ export const DeleteChannelModal = () => {
             <DialogContent className="bg-white text-black p-0 overflow-hidden">
                 <DialogHeader className="pt-8 px-6">
                     <DialogTitle className="text-2xl text-center font-bold">
-                        Delete Channel
+                        Supprimer le canal
                     </DialogTitle>
                     <DialogDescription className="text-center text-zinc-500">
-                        Are you sure you want to do this ? <br />
+                        Es-tu sûr de vouloir faire ça ? <br />
                         <span className="text-indigo-500 font-semibold">#{channel?.name}</span> will be permanently deleted.
                     </DialogDescription>
                 </DialogHeader>
@@ -67,14 +67,14 @@ export const DeleteChannelModal = () => {
                             variant="ghost"
                             onClick={onClose}
                         >
-                            Cancel
+                            Annuler
                         </Button>
                         <Button
                             disabled={isLoading}
                             variant="primary"
                             onClick={onClick}
                         >
-                            Confirm
+                            Confirmer
                         </Button>
                     </div>
                 </DialogFooter>

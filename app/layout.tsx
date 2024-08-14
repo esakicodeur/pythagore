@@ -8,6 +8,9 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ModalProvider } from "@/components/providers/modal-provider";
 import { SocketProvider } from "@/components/providers/socket-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
+import Home from "@/pages/home";
+import Script from "next/script";
+import Head from "next/head";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -28,7 +31,7 @@ export default function RootLayout({
           cn(
             font.className,
             "bg-white dark:bg-[#313338]"
-        )}>
+          )}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -42,6 +45,8 @@ export default function RootLayout({
               </QueryProvider>
             </SocketProvider>
           </ThemeProvider>
+
+          {/* <Script src="/static/script.js" strategy="lazyOnload"></Script> */}
         </body>
       </html>
     </ClerkProvider>

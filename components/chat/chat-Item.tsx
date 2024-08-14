@@ -23,6 +23,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/hooks/use-modal-store";
+import Script from "next/script";
 
 interface ChatItemProps {
     id: string;
@@ -212,11 +213,11 @@ export const ChatItem = ({
                                     )}
                                 />
                                 <Button disabled={isLoading} size="sm" variant="primary">
-                                    Save
+                                    Enregistrer
                                 </Button>
                             </form>
                             <span className="text-[10px] mt-1 text-zinc-400">
-                                Press escape to cancel, enter to save
+                                Appuyez sur Échap pour annuler, entrez pour enregistrer
                             </span>
                         </Form>
                     )}

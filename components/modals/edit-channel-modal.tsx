@@ -37,11 +37,11 @@ import { useEffect } from "react";
 
 const formSchema = z.object({
     name: z.string().min(1, {
-        message: "Channel name is required."
+        message: "Le nom du canal est requis."
     }).refine(
         name => name !== "general",
         {
-            message: "Channel name cannot be 'general'"
+            message: "Le nom du canal ne peut pas être ' général '"
         }
     ),
     type: z.nativeEnum(ChannelType)
@@ -100,7 +100,7 @@ export const EditChannelModal = () => {
             <DialogContent className="bg-white text-black p-0 overflow-hidden">
                 <DialogHeader className="pt-8 px-6">
                     <DialogTitle className="text-2xl text-center font-bold">
-                        Edit Channel
+                        Modifier le canal
                     </DialogTitle>
                 </DialogHeader>
                 <Form {...form}>
@@ -112,13 +112,13 @@ export const EditChannelModal = () => {
                                 render={({ field }) => (
                                     <FormItem>
                                         <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
-                                            Channel name
+                                            Nom du canal
                                         </FormLabel>
                                         <FormControl>
                                             <Input
                                                 disabled={isLoading}
                                                 className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                                                placeholder="Enter channel name"
+                                                placeholder="Entrez le nom du canal"
                                                 {...field}
                                             />
                                         </FormControl>
@@ -131,7 +131,7 @@ export const EditChannelModal = () => {
                                 name="type"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Channel Type</FormLabel>
+                                        <FormLabel>Type de canal</FormLabel>
                                         <Select
                                             disabled={isLoading}
                                             onValueChange={field.onChange}
@@ -141,7 +141,7 @@ export const EditChannelModal = () => {
                                                 <SelectTrigger
                                                     className="bg-zinc-300/50 border-0 focus:ring-0 text-black ring-offset-0 focus:ring-offset-0 capitalize outline-none"
                                                 >
-                                                    <SelectValue placeholder="Select a channel type" />
+                                                    <SelectValue placeholder="Sélectionnez un type de canal" />
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
@@ -163,7 +163,7 @@ export const EditChannelModal = () => {
                         </div>
                         <DialogFooter className="bg-gray-100 px-6 py-4">
                             <Button variant="primary" disabled={isLoading}>
-                                Save
+                                Enregistrer
                             </Button>
                         </DialogFooter>
                     </form>

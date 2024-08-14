@@ -11,6 +11,7 @@ import { useChatScroll } from "@/hooks/use-chat-scroll";
 
 import { ChatWelcome } from "./chat-welcome";
 import { ChatItem } from "./chat-Item";
+import Script from "next/script";
 
 const DATE_FORMAT = "d MMM yyyy, HH:mm";
 
@@ -77,7 +78,7 @@ export const ChatMessages = ({
             <div className="flex flex-col flex-1 justify-center items-center">
                 <Loader2 className="h-7 w-7 text-zinc-500 animate-spin my-4" />
                 <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                    Loading messages...
+                    Chargement des messages...
                 </p>
             </div>
         )
@@ -88,14 +89,14 @@ export const ChatMessages = ({
             <div className="flex flex-col flex-1 justify-center items-center">
                 <ServerCrash className="h-7 w-7 text-zinc-500 my-4" />
                 <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                    Something went wrong !
+                    Quelque chose s'est mal passé !
                 </p>
             </div>
         )
     }
 
     return (
-        <div ref={chatRef} className="flex-1 flex flex-col py-4 overflow-auto">
+        <div ref={chatRef} className="flex-1 flex flex-col py-4 overflow-auto bg-img">
             {!hasNextPage && <div className="flex-1" />}
             {!hasNextPage && (
                 <ChatWelcome
@@ -112,7 +113,7 @@ export const ChatMessages = ({
                         onClick={() => fetchNextPage()}
                             className="text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 text-xs my-4 dark:hover:text-zinc-300 transition"
                         >
-                            Load previous messages
+                            Charger les messages précédents
                         </button>
                     )}
                 </div>
