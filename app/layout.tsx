@@ -15,8 +15,8 @@ import Head from "next/head";
 const font = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pythagore",
-  description: "Pythagore Chat Application",
+  title: "Academie des elites",
+  description: "Academie des elites Chat Application",
 };
 
 export default function RootLayout({
